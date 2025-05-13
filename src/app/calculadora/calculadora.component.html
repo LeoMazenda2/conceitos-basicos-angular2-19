@@ -10,10 +10,17 @@
 
       <button type="button" (click)="calcularResultado()">Somar</button>
 
-      <div class="result-display">
-        <hr>
-        <p>Resultado: <span id="result">{{resultado}}</span></p>
-      </div>
+      @if (resultado) {
+        <div class="result-display">
+          <hr>
+          <p>Resultado: <span id="result">{{resultado}}</span></p>
+        </div>
+      } @else {
+        <div class="result-display">
+          <hr>
+          <p>Sem resultado vai aparecer aqui </p>
+        </div>
+      }
 
     </form>
   </div>
